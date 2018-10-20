@@ -1,7 +1,8 @@
-# clash-resolver-lite 
-It tells you if you have clashes with other sections if you want to repeat a course or take a course with another section
-
+# [clash-resolver-lite](https://candh.github.io/clash-resolver-lite/)
+It tells you if you have clashes with other sections if you want to repeat a course or take a course with another section. Try it: 
+https://candh.github.io/clash-resolver-lite/
 ![clash-resolver-img.png](https://i.postimg.cc/zBXRRS2q/clash-resolver-img.png)
+
 
 
 ## Why:
