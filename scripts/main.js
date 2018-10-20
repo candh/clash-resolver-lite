@@ -412,26 +412,28 @@ const app = new Vue({
     displayClashes() {
       this.calculateClashes()
       let lenghts = this.clashes.map((e) => e.length)
-      let min_section = lenghts.indexOf(0) 
+      let clash_free_section = lenghts.indexOf(0) 
 
       this.isTimeTableInputRequired = true
       this.isTimeTableInputEnabled = false
       this.isLegendNeeded = true
-        
-      if (min_section >= 0) { // meaning there exists a section that has no clashses
-        this.instruction = `Congrats! You have no clashes with ${this.otherClasses[min_section].name}`
-        this.howManyTables = [{key: this.ukey(), other_section: this.otherClasses[min_section], myClasses: this.myClasses }]
-      } else {
-        this.displayAllResults()
-      }
-    },
-    displayAllResults() {
-      this.instruction = "Sorry, you have clashes with all the sections"
-      this.sub_instruction = "Don't worry, they'll most likely make a repeater section"
+
       const allRes = []
+      if (clash_free_section >= 0) { // meaning there exists a section that has no clashses
+        // TODO: if we no clashes with 2 or more sections, display them all with "and" as a delimeter
+        this.instruction = `Congrats! You have no clashes with ${this.otherClasses[clash_free_section].name}` 
+        this.sub_instruction = `Here are the results`
+        // add it to appear first
+        allRes.push({key: this.ukey(), other_section: this.otherClasses[clash_free_section], myClasses: this.myClasses })
+      } else {
+        this.instruction = "Sorry, you have clashes with all the sections"
+        this.sub_instruction = "Don't worry, they'll most likely make a repeater section"
+      }
 
       for (const [index, tables] of this.clashes.entries()) {
-        allRes.push({ key: this.ukey(), other_section: this.otherClasses[index], myClasses: this.myClasses })
+        if (index !== clash_free_section) { // because that has been already added
+          allRes.push({ key: this.ukey(), other_section: this.otherClasses[index], myClasses: this.myClasses })
+        }
       }
 
       this.howManyTables = allRes
