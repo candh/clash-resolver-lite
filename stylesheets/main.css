@@ -1,0 +1,165 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* 
+  0 - Jumobotron
+  1 - General
+  2 - Time Table
+  3 - Transitions
+*/
+
+/* 0 */
+.jumbotron {
+  padding: 50px;
+}
+/* /0 */
+
+/* 1 */
+.disabled {
+  background-color: gray;
+  pointer-events: none;
+}
+
+.secondary-text {
+  color: gray;
+}
+/* /1 */
+
+/* 2 */
+#slot-duration-choser p {
+  display: inline;
+}
+
+#slot-duration-choser span {
+  padding-right: 25px;
+}
+
+#legend-wrapper {
+  text-align: center;
+}
+
+#legend-wrapper ul li{
+  display: inline-flex;
+  align-items: center;
+}
+
+#legend-wrapper .color-preview {
+  width: 15px;
+  height: 15px;
+  /* background: red; */
+  display: inline-block;
+  margin: 0 10px 0px 10px;
+}
+
+#legend-wrapper .legend-color-text {
+  font-size: 0.8em;
+}
+
+.time-table {
+  margin: auto;
+}
+
+#table-name {
+  text-align: center;
+}
+
+#time-table-wrapper {
+  margin-top:;
+  margin-bottom: 3em;
+}
+
+.time-table .waves-effect {
+  display: table-cell;
+  /* transition: all 0 ease-out 0; */
+}
+
+.time-table table, td, th {
+  text-align: center;
+  border-radius: 0px;
+  border: 1px solid gainsboro;
+}
+
+.time-table .slot-time {
+  font-size: 0.7em;
+  color: grey;
+  font-weight: normal;
+}
+
+.time-table .slot-no {
+  font-size: 2em;
+}
+
+.time-table thead th {
+  width: 80px;
+  height: 80px;
+}
+
+.time-table tbody td {
+  width: 90px;
+  height: 90px;
+}
+
+.time-table .selected {
+  background-color: rgba(56, 173, 169, 1.0);
+}
+
+.time-table .selected-g {
+  border: 0;
+  background-color: rgba(229, 80, 57,1.0);
+}
+
+.highlight-our {
+  background: rgba(56, 173, 169, 0.5);
+}
+
+.highlight-our-g {
+  border: 0;
+  background: rgba(56, 173, 169, 0.8);
+}
+
+.highlight-their {
+  background: rgba(250, 152, 58, 0.5);
+}
+
+.highlight-their-g {
+  border: 0;
+  background:rgba(250, 152, 58, 0.8);
+}
+
+.highlight-clash { 
+  background-color: rgba(229, 80, 57, 1.0) !important;
+}
+
+
+/* /2 */
+
+/* 3 */
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+.fade-move {
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+#class-title .input-field input {
+  margin-top: 10px; 
+  font-size: 3em;
+  padding-bottom: 10px;
+}
+
+.section-name-error p{
+  color: #ff7f50;
+  font-size: 11px;
+  margin-bottom: 15px;
+}
+
+#slot-duration-choser {
+  transition: all 0.3 ease
+}
